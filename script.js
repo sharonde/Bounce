@@ -1,3 +1,6 @@
+var x = 50;
+var y = 50;
+
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -7,8 +10,7 @@ function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
-  // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+ 
 }
 
 
@@ -18,9 +20,17 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
+
+  // Kleur de achtergrond blauw, zodat je het kunt zien
+  background('blue');
+
   // stel vulkleur in
   fill(100, 100, 255);
 
   // teken een cirkel
-  ellipse(50,50,80,80);
+  ellipse(x,y,80,80);
+
+  //positie updaten
+  x = x + 1;
+  y = y + 1;
 }
